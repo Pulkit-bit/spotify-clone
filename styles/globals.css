@@ -1,0 +1,81 @@
+/* Import Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #121212;
+  /* Spotify dark theme */
+  color: white;
+  text-align: center;
+}
+
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  background-color: #000;
+  border-bottom: 2px solid #1DB954;
+}
+
+.navbar h2 {
+  color: #1DB954;
+  font-size: 1.8rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #1DB954;
+}
+
+/* Main Content */
+.container {
+  margin-top: 100px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  text-shadow: 0px 0px 10px rgba(30, 215, 96, 0.8);
+}
+
+.btn {
+  background-color: #1DB954;
+  /* Spotify Green */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  /* Makes it rounded */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #1ed760;
+  /* Lighter Spotify Green on hover */
+  transform: scale(1.05);
+  /* Slightly enlarges on hover */
+}
+
+.btn:active {
+  transform: scale(0.95);
+  /* Slightly shrinks on click */
+}
