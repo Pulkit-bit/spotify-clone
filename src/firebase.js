@@ -44,5 +44,5 @@ const logout = async () => {
   }
 };
 
-// ✅ Export authentication functions & Firestore
-export { auth, db, signInWithGoogle, logout };
+// ✅ EXPORT EVERYTHING (Including `app`)
+export { app, auth, db, signInWithGoogle, logout };
