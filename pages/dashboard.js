@@ -203,7 +203,7 @@ export default function Dashboard() {
                 />
                 <div className="song-info">
                   <h3>{song.title}</h3>
-                  <p>{song.channelTitle}</p>
+                 
                 </div>
               </li>
             ))}
@@ -319,7 +319,7 @@ export default function Dashboard() {
         .logout-btn {
           background-color: green;
           padding: 8px 12px;
-          border-radius: 15px;;
+          border-radius: 15px;
           cursor: pointer;
           transition: background-color 0.3s ease, transform 0.2s ease;
         }
@@ -487,6 +487,113 @@ export default function Dashboard() {
         border-radius: 12px; /* Optional: Rounded corners */
         width: 50%;
         }
+
+        /* Responsive Design - Mobile Fixes */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+          
+  .search-input {
+    width: 90%;
+  }
+     .logout-btn {
+      position: relative;
+     background-color: green;
+          padding: 8px 12px;
+          border-radius: 15px;
+          right: 143px;
+          font-size: small;
+      }
+
+
+  .welcome {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+
+  .liked-songs {
+    position: relative;
+    width: 100px;
+    top: -114px;
+    right: -122px;
+    margin: -30px auto;
+    font-size: small;
+    height: 39px;
+  }
+
+  .search-results {
+    flex-direction: column;
+    align-items: center;
+  }
+.search-results-title {
+    text-align: center;
+    margin-top: 11px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+  .song-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .song-item {
+    width: 90%;
+  }
+
+  .youtube-player {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+     .music-player {
+          opacity: 0.7;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 4px;
+          background-color: #181818;
+          padding: 2px;
+          position: fixed;
+          bottom: 25px;
+          width: 92%;
+          transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+          .prev-button{
+        font-size: 1.2rem; /* Increase the icon size */
+        border-radius: 12px; /* Optional: Rounded corners */
+        }
+        
+         .play-pause-button{
+        font-size: 1.2rem; /* Increase the icon size */
+        border-radius: 12px; /* Optional: Rounded corners */
+        }
+
+         .next-button{
+        font-size: 1.2rem; /* Increase the icon size */
+        border-radius: 12px; /* Optional: Rounded corners */
+        }
+
+
+
+  .seek-bar {
+    width: 80%;
+  }
+}
           
       `}</style>
     </div>

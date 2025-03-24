@@ -9,8 +9,7 @@
 }
 
 body {
-  background-color: #121212;
-  /* Spotify dark theme */
+  background-color: #121212; /* Spotify dark theme */
   color: white;
   text-align: center;
 }
@@ -54,28 +53,108 @@ h1 {
 }
 
 .btn {
-  background-color: #1DB954;
-  /* Spotify Green */
+  background-color: #1DB954; /* Spotify Green */
   color: white;
   font-size: 16px;
   font-weight: bold;
   padding: 12px 24px;
   border: none;
-  border-radius: 50px;
-  /* Makes it rounded */
+  border-radius: 50px; /* Makes it rounded */
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
-  background-color: #1ed760;
-  /* Lighter Spotify Green on hover */
-  transform: scale(1.05);
-  /* Slightly enlarges on hover */
+  background-color: #1ed760; /* Lighter Spotify Green on hover */
+  transform: scale(1.05); /* Slightly enlarges on hover */
 }
 
 .btn:active {
-  transform: scale(0.95);
-  /* Slightly shrinks on click */
+  transform: scale(0.95); /* Slightly shrinks on click */
+}
+
+/* ---------------- RESPONSIVE DESIGN ---------------- */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .navbar h2 {
+    font-size: 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+    margin: 0 10px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+
+  }
+
+  .btn {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-top: 100px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .navbar h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .btn {
+    font-size: 20px;
+    padding: 8px 29px;
+    margin-top: 100px;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .navbar h2 {
+    font-size: 1.2rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    font-size: 20px;
+    padding: 6px 29px;
+    margin-top: 100px;
+  }
 }

@@ -240,122 +240,190 @@ export default function LikedSongs() {
       <style jsx>{`
 
         .grid-container {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-          gap: 20px;
-          padding: 20px;
-        }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
 
-        .grid-item {
-          background-color: #222;
-          padding: 15px;
-          border-radius: 10px;
-          text-align: center;
-          cursor: pointer;
-          transition: transform 0.2s;
-          color: lightseagreen;
-          font-variant: all-petite-caps;
-        }
+/* Individual song items */
+.grid-item {
+  background-color: #222;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: lightseagreen;
+  font-variant: all-petite-caps;
+}
 
-        .grid-item:hover {
-          transform: scale(1.05);
-        }
+.grid-item:hover {
+  transform: scale(1.05);
+}
 
-        .thumbnail {
-          width: 100%;
-          border-radius: 10px;
-        }
+/* Thumbnail Image */
+.thumbnail {
+  width: 100%;
+  border-radius: 10px;
+}
 
-        .music-player {
-          opacity: 0.7;
-          position: fixed;
-          bottom: 22px;
-          left: 40px;
-          width: 93%;
-          background: #222;
-          padding: 10px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          color: white;
-          box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
-          transition: opacity 0.3s ease-in-out; /* Smooth transition */
-        }
-        .music-player:hover{
-          opacity: 0.9;
-        }
-        .song-info {
-          color: green;
-          display: flex;
-          align-items: center;
-          overflow: hidden; /* Ensures text doesn't overflow */
-          white-space: nowrap;
-          width: 500px; /* Adjust as needed */
-          
-        }
+/* Music Player */
+.music-player {
+  opacity: 0.7;
+  position: fixed;
+  bottom: 10px;
+  left: 5%;
+  width: 90%;
+  background: #222;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
 
-        .title-container {
-          width: 220px; /* Set width to control scrolling area */
-          overflow: hidden;
-          white-space: nowrap;
-          position: relative;
-        }
+.music-player:hover {
+  opacity: 0.9;
+}
 
-        .scrolling-title {
-          display: inline-block;
-          white-space: nowrap;
-          animation: scrollText 7s linear infinite;
-        }
+/* Song Info Section */
+.song-info {
+  color: green;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 500px;
+}
 
-        @keyframes scrollText {
-          0% {
-          transform: translateX(100%);
-        }
-          100% {
-          transform: translateX(-100%);
-        }
-        }
+/* Title Scrolling */
+.title-container {
+  width: 220px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
 
+.scrolling-title {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scrollText 7s linear infinite;
+}
 
-        .player-thumbnail {
-          width: 50px;
-          height: 50px;
-          border-radius: 5px;
-          margin-right: 10px;
-        }
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 
-        .player-controls {
-          display: flex;
-          gap: 10px;
-        }
+/* Player Thumbnail */
+.player-thumbnail {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
 
-        .player-controls button {
-          background: none;
-          border: none;
-          color: white;
-          font-size: 1.5rem;
-          cursor: pointer;
-        }
+/* Player Controls */
+.player-controls {
+  display: flex;
+  gap: 10px;
+}
 
-        .seek-bar {
-          width: 100%;
-          padding: 2px;
-          margin: 5px 20px;
-          appearance: none;
-          background: #1DB954;
-          height: 5px;
-          border-radius: 5px;
-        }
+.player-controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
 
-         .like-button {
-          margin-top: 2px;
-          font-size: 18px;
-          padding: 10px;
-          background: none;
-          border: none;
-          color: white;
-          cursor: pointer;
-        }
+/* Seek Bar */
+.seek-bar {
+  width: 100%;
+  padding: 2px;
+  margin: 5px 20px;
+  appearance: none;
+  background: #1DB954;
+  height: 5px;
+  border-radius: 5px;
+}
+
+/* Like Button */
+.like-button {
+  margin-top: 2px;
+  font-size: 18px;
+  padding: 10px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* 📌 RESPONSIVENESS ADJUSTMENTS */
+@media (max-width: 1024px) {
+  .song-info {
+    width: 350px;
+  }
+
+  .title-container {
+    width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .music-player {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .song-info {
+    width: 90%;
+    text-align: center;
+  }
+
+  .title-container {
+    width: 100%;
+  }
+
+  .player-thumbnail {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .player-controls {
+    gap: 5px;
+  }
+
+  .music-player {
+    padding: 8px;
+  }
+
+  .seek-bar {
+    width: 80%;
+  }
+}
 
 
       `}</style>
