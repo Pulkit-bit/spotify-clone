@@ -20,7 +20,7 @@ export default function Home() {
     <>
       {/* Navbar */}
       <nav className="navbar">
-        <h2>Spotify Clone</h2>
+        <h2>vibraX</h2>
         <div className="nav-links">
           {user && <button className="btn" onClick={logout}>Logout</button>}
         </div>
@@ -28,7 +28,7 @@ export default function Home() {
 
       {/* Main Content */}
       <div className="container">
-        <h1>Welcome to Spotify Clone</h1>
+        <h1>Welcome to vibraX music app</h1>
         {user ? (
           <>
             <p>Logged in as {user.displayName}</p>

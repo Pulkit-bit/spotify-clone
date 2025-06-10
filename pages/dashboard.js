@@ -163,7 +163,7 @@ export default function Dashboard() {
   return (
     <div className="dashboard">
       <nav className="navbar">
-        <h2 className="logo">Spotify Clone</h2>
+        <h2 className="logo">vibraX</h2>
         <div className="search-bar">
           <input
             type="text"

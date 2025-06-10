@@ -16,7 +16,7 @@ export default function Login() {
 
   return (
     <div className="container">
-      <h1>Login to Spotify Clone</h1>
+      <h1>Login to vibraX</h1>
 
       {/* Google Login Button */}
       <button className="btn" onClick={signInWithGoogle}>
